@@ -1,10 +1,3 @@
 <template>
-  <div>
-    <va-button style="margin-bottom: 20px;" href="./../../../registration.html">Reg</va-button><br>
-    <va-button href="./../../../auth.html">Auth</va-button>
-  </div>
+  <router-view></router-view>
 </template>
-
-<script>
-export default {}
-</script>

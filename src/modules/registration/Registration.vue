@@ -35,7 +35,6 @@
 
                 <div class="reg-field">
                     <input 
-                    style="width: 80%;"
                     class="reg-input" 
                     :type="isPasswordVisible ? 'text' : 'password'"
                     placeholder="Пароль"
@@ -51,7 +50,6 @@
 
                 <div class="reg-field">
                     <input 
-                    style="width: 80%;"
                     class="reg-input" 
                     :type="isPasswordVisible ? 'text' : 'password'"
                     placeholder="Повторите пароль"
@@ -73,7 +71,7 @@
             color="#FFFFFF"
             text-color="#292929"
             border-color="#292929"
-            >Sign Up</va-button>
+            >Sign Up</va-button><br>
 
             <va-button
             style="text-decoration-line:underline;"
@@ -82,7 +80,7 @@
             color="#FFFFFF"
             text-color="#9ED5F0"
             size="small"
-            href="./../../../auth.html">Уже зарегистрированы?</va-button>
+            to="/authorization">Уже зарегистрированы?</va-button>
         </div>
     </div>
 </template>

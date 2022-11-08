@@ -6,7 +6,13 @@
 
 <template>
     <div class="reg-window">
-        <div class="auth-form">
+        <div class="loading-screen" v-if="!isLoaded">
+            <va-progress-circle indeterminate 
+            color="#9ED5F0"
+            :thickness="0.3"
+            size="large"/>
+        </div>
+        <div class="auth-form" v-else>
             <span class="logo">Contact Proxy</span>
             <div class="reg-fields">
                 <div class="reg-field">
@@ -19,7 +25,6 @@
 
                 <div class="reg-field">
                     <input 
-                    style="width: 80%;"
                     class="reg-input" 
                     :type="isPasswordVisible ? 'text' : 'password'"
                     placeholder="Пароль"
@@ -41,7 +46,7 @@
             color="#FFFFFF"
             text-color="#292929"
             border-color="#292929"
-            >Sign In</va-button>
+            >Sign In</va-button><br>
             <div>
                 <va-button
                 style="text-decoration-line:underline;"
@@ -50,7 +55,7 @@
                 color="#FFFFFF"
                 text-color="#9ED5F0"
                 size="small"
-                href="./../../../registration.html">Зарегистрироваться</va-button>
+                to="/registration">Зарегистрироваться</va-button>
                 
                 <va-button
                 style="text-decoration-line:underline;"
@@ -59,7 +64,7 @@
                 color="#FFFFFF"
                 text-color="#9ED5F0"
                 size="small"
-                href="TODO)">Забыли пароль?</va-button>
+                to="TODO)">Забыли пароль?</va-button>
             </div>
         </div>
     </div>
@@ -68,9 +73,13 @@
 <script>
 export default {
     data: () => ({
+        isLoaded: false,
         isPasswordVisible: false,
-        password: '',
-        mail: '',
+        password: "",
+        mail: "",
     }),
+    created() {
+        this.isLoaded = true;
+    },
 }
 </script>
