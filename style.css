@@ -1,7 +1,7 @@
 :root {
     --main-black: #292929;
     --custom-blue: #9ED5F0;
-    --custom-red: #FF6A6A
+    --custom-red: #FF6A6A;
   }
 
 @font-face {
@@ -25,12 +25,18 @@ body {
     padding: 0;
 }
 
+.loading-screen {
+    position: absolute;
+    top: 48%;
+    left: 48%;
+}
+
 .reg-window {
     height: 100vh;
     width: 100vw;
     position:fixed;
     overflow:hidden;
-    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(32, 32, 32) 35%, rgb(212, 219, 220) 100%)
+    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(41, 41, 41) 35%, rgb(212, 219, 220) 100%)
 }
 
 .reg-form {
@@ -55,7 +61,7 @@ body {
 .reg-input {
     position: relative;
     left: 5%;
-    width: 90%;
+    width: 85%;
     outline: none;
     height: fit-content;
     font-size: 20px;
@@ -66,6 +72,7 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-color: gray;
+    background: none;
 }
 
 .reg-input:focus {
@@ -81,7 +88,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    width: 100%;
+    width: 90%;
 }
 
 .reg-field {
@@ -104,10 +111,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 30%;
+    top: 29%;
     left: 30%;
     background-color: white;
     width: 40%;
-    height: 40%;
+    height: 42%;
     border-radius: 20px;
 }
