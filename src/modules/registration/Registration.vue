@@ -6,7 +6,13 @@
 
 <template>
     <div class="reg-window">
-        <div class="reg-form">
+        <div class="loading-screen" v-if="!isLoaded">
+            <va-progress-circle indeterminate 
+            color="#9ED5F0"
+            :thickness="0.3"
+            size="large"/>
+        </div>
+        <div class="reg-form" v-else>
             <span class="logo">Contact Proxy</span>
             <div class="reg-fields">
                 <div class="reg-field">
@@ -88,6 +94,7 @@
 <script>
 export default {
     data: () => ({
+        isLoaded: false,
         isPasswordVisible: false,
         repeatPassword: '',
         password: '',
@@ -95,5 +102,8 @@ export default {
         surname: '',
         mail: '',
     }),
+    mounted() {
+        this.isLoaded = true
+    },
 }
 </script>

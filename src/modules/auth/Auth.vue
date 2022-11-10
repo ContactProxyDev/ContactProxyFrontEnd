@@ -78,7 +78,7 @@ export default {
         password: "",
         mail: "",
     }),
-    created() {
+    mounted() {
         this.isLoaded = true;
     },
 }
